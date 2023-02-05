@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kleider | Account</title>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+	<div class = "fix">
+		<div class = "header"> 
+			~ Kleider ~
+		</div>
+		
+		<div class = "navigation">
+			<nav>
+				<ul>
+					<li ><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li class = "onpage"><a href="account.html">Account</a></li>
+					
+					<li><a href="search.html">Search</a></li>
+					<li><a href="basket.html">Shopping Bag <img src = "pictures/bag.png" height = "20px" valign = "bottom"></a></li>
+					
+				</ul>
+			</nav>
+				
+		</div>
+	</div>
+	
+	<!-- account details -->
+	
+	<div class = "account-page">
+			<div class = "formdiv">
+				<div class "formbtn">
+					<span onclick = "login()">Login</span>
+					<span onclick = "register()">Register</span>
+					<hr id= "ind">
+				</div>
+				
+				<form id = "loginform">
+					<input type = "text" placeholder = "Username">
+					<input type = "password" placeholder = "Password">
+					<button type = "submit" class = "btn">Login</button>
+					<a href = "" onclick = "register()">No account? Register</a>
+				</form>
+				
+				<form id = "regform">
+					<input type = "text" placeholder = "Username">
+					<input type = "email" placeholder = "Email">
+					<input type = "password" placeholder = "Password">
+					<button type = "submit" class = "btn">Register</button>
+				</form>
+			</div>
+	</div>
+	
+	<!-- javascript used to generate responsive account page for login and register -->
+	
+	<script>
+	
+	var loginform = document.getElementById("loginform");
+	var regform = document.getElementById("regform");
+	var ind = document.getElementById("ind");
+	
+	function register(){
+		regform.style.transform = "translateX(0px)";
+		loginform.style.transform = "translateX(0px)";
+		ind.style.transform = "translateX(250px)";
+	}
+	function login(){
+		regform.style.transform = "translateX(460px)";
+		loginform.style.transform = "translateX(460px)";
+		ind.style.transform = "translateX(150px)";
+	}
+	
+	</script>
+	
+
+</body>
+
+</html>
